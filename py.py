@@ -19,7 +19,7 @@ async def on_ready():
 async def on_message(message):
   RN = "[로인온라인 시스템]"
   if message.content == "r!":
-    await client.send_message(message.channel, "`[로인온라인 공식 시스템]\nr! => 로인온라인 봇에 관한 도움말을 확인합니다.\nr!내정보 => 나의 디스코드 정보를 확인합니다.\nr!문의 => 디스코드봇 제작자에게 문의 보냅니다.`")
+    await client.send_message(message.channel, "`[로인온라인 공식 시스템]\nr! => 로인온라인 봇에 관한 도움말을 확인합니다.\nr!시스템 => 디스코드 봇의 시스템 정보를 확인합니다.\nr!내정보 => 나의 디스코드 정보를 확인합니다.\nr!문의 => 디스코드봇 제작자에게 문의 보냅니다.`")
   else:
     if message.content[2:5] == "DM":
       if message.author.id == "419810897058463754":
