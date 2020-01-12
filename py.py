@@ -42,6 +42,7 @@ async def on_message(message):
       embed.add_field(name="제작일", value="2020.01.12", inline=True)
       embed.add_field(name="버전", value="v2.1[BETA]", inline=True)
       embed.add_field(name="아이디", value="9423129273201274", inline=True)
+      embed.add_field(name="공식 홈페이지", value="http://discord.roinbot.kro.kr", inline=True)
       await client.send_message(message.channel, embed=embed)
     if message.content[2:5] == "문의":
       if message.content[6:]:
