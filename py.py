@@ -36,8 +36,15 @@ async def on_message(message):
       embed.add_field(name="아이디", value=message.author.id, inline=True)
       embed.set_thumbnail(url=message.author.avatar_url)
       await client.send_message(message.channel, embed=embed)
+    if message.content[2:5] == "시스템":
+      embed = discord.Embed(color=0x0028ff)
+      embed.add_field(name="제작자", value="헌덴[HUNDEN]", inline=True)
+      embed.add_field(name="제작일", value="2020.01.12", inline=True)
+      embed.add_field(name="버전", value="v2.1[BETA]", inline=True)
+      embed.add_field(name="아이디", value="9423129273201274", inline=True)
+      await client.send_message(message.channel, embed=embed)
     if message.content[2:5] == "문의":
-      if message.content[24:]:
+      if message.content[6:]:
         if message.channel.is_private and message.author.id != "665768509707518033":
           await client.send_message(discord.utils.get(client.get_all_members(), id="419810897058463754"), message.author.name + "(" + message.author.id + ") : " + message.content)
       else:
